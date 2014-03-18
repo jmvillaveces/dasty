@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="eng"><!-- InstanceBegin template="/ebi/Templates/temp.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
+<meta name="author" content="EBI Web Team" />
+<meta http-equiv="Content-Language" content="en-GB" />
+<meta http-equiv="Window-target" content="_top" />
+<meta name="no-email-collection" content="http://www.unspam.com/noemailcollection/" />
+<meta name="generator" content="Dreamweaver 8" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>DASTY3, a protein DAS client</title>
+<!-- InstanceEndEditable -->
+<link rel="stylesheet"  href="http://www.ebi.ac.uk/inc/css/contents.css"     type="text/css" />
+<link rel="stylesheet"  href="http://www.ebi.ac.uk/inc/css/userstyles.css"   type="text/css" />
+<script src="http://www.ebi.ac.uk/inc/js/contents.js" type="text/javascript"></script>
+<link rel="stylesheet"  href="http://www.ebi.ac.uk/inc/css/sidebars.css"   type="text/css" />
+<link rel="SHORTCUT ICON" href="http://www.ebi.ac.uk/bookmark.ico" />
+<style type="text/css">
+@media print { 
+	body, .contents, .header, .contentsarea, .head { 
+		position: relative;
+	}  
+}  
+</style>
+<!-- InstanceBeginEditable name="head" -->
+<!--  start meta tags, css , javascript here   -->
+
+
+ 
+  
+<!--  end meta tags, css , javascript here  -->
+<!-- InstanceEndEditable -->
+</head>
+<body onload="if(navigator.userAgent.indexOf('MSIE') != -1) {document.getElementById('head').allowTransparency = true;}">
+	<div class="headerdiv" id="headerdiv" style="position:absolute; z-index: 1;">
+		<iframe src="/inc/head.html" name="head" id="head" frameborder="0" marginwidth="0px" marginheight="0px" scrolling="no"  width="100%" style="position:absolute; z-index: 1; height: 57px;">Your browser does not support inline frames or is currently configured not to display inline frames. Content can be viewed at actual source page: http://www.ebi.ac.uk/inc/head.html</iframe>
+	</div>
+	<div class="contents" id="contents"><table class="contentspane" id="contentspane" summary="The main content pane of the page"  style="width: 100%"><tr><td class="leftmargin"><img src="http://www.ebi.ac.uk/inc/images/spacer.gif" class="spacer" alt="spacer" /></td><td class="leftmenucell" id="leftmenucell">
+	  <div class="leftmenu" id="leftmenu" style="width: 145px; visibility: visible; display: block;"> 
+		  <!-- InstanceBeginEditable name="leftnav" -->
+		  
+		  <!-- start left menu here  --> 
+		  <ul id="sidemenuid" class="sidemenu">    
+    		<li><a href="../../index.html">Dasty3 Home</a></li>
+            <li><a href="../../dasty2/">Dasty2 Home</a></li>
+			<li><a href="introduction.html">Introduction</a></li>
+            <li><a href="publications.html">Publications</a></li>
+            <li class="clickmeopen"><a href="user_manual.html">User Manual</a></li>
+            <li><a href="installation.html">Installation</a></li>
+            <li><a href="download.html">Download</a></li>
+            <li><a href="license.html">License</a></li>
+            <li><a href="credits.html">Credits</a></li>
+            <li><a href="contact.html">Contact Dasty</a></li>
+            <li><a href="jsdas.html">JSDAS</a></li>
+			<li class="leftmenudivider"></li>
+		  </ul>
+		  <!-- The following 2 divs add an Icon Box to your Menu -->
+		  <!-- end left menu here -->
+		<!-- InstanceEndEditable -->
+		<!-- InstanceBeginEditable name="lefticons" -->
+		
+		  
+		
+		
+		
+		
+		<!-- InstanceEndEditable -->
+	    <script type="text/javascript" src="http://www.ebi.ac.uk/inc/js/sidebars.js"></script><img src="http://www.ebi.ac.uk/inc/images/spacer.gif" class="spacer" alt="spacer" /></div></td><td class="contentsarea" id="contentsarea">
+		<!-- InstanceBeginEditable name="contents" -->
+		
+		<!-- start contents here -->
+		
+		<div class="breadcrumbs">
+    		<a href="http://www.ebi.ac.uk/" class="firstbreadcrumb">EBI</a>
+    		<a href ="http://www.ebi.ac.uk/Tools/">Tools</a>
+    		<a href="http://www.ebi.ac.uk/Tools/proteomic.html">Proteomic Services</a>
+            <a href="http://www.ebi.ac.uk/dasty/">Dasty</a>
+		</div>										
+		<h1>User Manual</h1>
+        <p>This manual is based on a previous one kindly written by  <a href="http://www.ebi.ac.uk/%7Epjones/">Phil Jones</a>.</p>
+        <h1>Tutorial: <strong>The Distributed Annotation System (DAS) and</strong> Dasty3.</h1>
+        <h2>Introduction</h2>
+        <p>By making use of DAS you can take advantage of being able to view   integrated information from multiple sources, without these sources   needing to be aware of each other.  You can also add your own DAS data   source, perhaps privately in your own institution and then view the   information served from this source in the context of features from   other institutions.</p>
+        <p>This tutorial will enable you to understand how DAS functions, how   you can find relevant DAS data sources and how you can view the data   from these sources using different tools with their own strengths.</p>
+        <h2>Example DAS Reference Server – The UniProt DAS Reference Server</h2>
+        <p>This section will illustrate how the information is provided.  Being   able to use DAS to full advantage does not require you to understand how   the DAS protocol works, however this will give you an insight into how   straight forward it can be to develop your own DAS data source and an   appreciation of the strengths and weaknesses of DAS.</p>
+        <p>DAS information is made available from DAS servers.  A DAS server is a   web application that serves data in the form of a series of XML   documents that can be read and processed by DAS client software.  There   are several different types of XML document, each having a specific   function, such as:</p>
+        <ul>
+          <li>providing the sequence of the molecule (nucleic acid or protein);</li>
+          <li>providing details of the features coordinated on a molecule;</li>
+          <li>providing a summary of the features coordinated on a molecule.</li>
+        </ul>
+        <p>If features on a specific protein are being obtained from several   different locations, it is very useful to ensure that one reliable,   common sequence has been obtained.  To achieve this, DAS separates DAS   servers into two kinds:</p>
+        <ul>
+          <li><strong>Reference servers</strong> provide the molecule sequence.</li>
+          <li><strong>Annotation servers</strong> provide features upon the   sequence, such as protein domains, or related to the protein, such as   journal references.  Annotation servers often refer to a specific   reference server as their 'map master', i.e. the server that you should   expect to be able to retrieve the corresponding sequence from.</li>
+        </ul>
+        <p>You will now investigate an example of each kind of server.</p>
+        <h2>The UniProt DAS Reference Server</h2>
+        <p>The UniProt DAS reference server has the primary purpose of providing   sequence information to DAS clients from the UniProt Knowledge Bank.    It can be queried using UniProt accession numbers, Swiss-Prot protein   Ids and also IPI (International Protein Index) accessions.</p>
+        <p>Navigate to <a href="http://www.ebi.ac.uk/das-srv/uniprot/das">http://www.ebi.ac.uk/das-srv/uniprot/das</a>    Here you will find a summary page describing the UniProt DAS server   together with some example queries that can be made to the server.</p>
+        <p>Now navigate to <a href="http://www.ebi.ac.uk/das-srv/uniprot/das/aristotle/sequence?segment=Q14974">http://www.ebi.ac.uk/das-srv/uniprot/das/aristotle/sequence?segment=Q14974</a></p>
+        <p>You are now presented with a very simple XML file that contains the   sequence of the protein Q14974 (Importin beta-1 subunit).  This is the   primary function of the UniProt DAS server.  Note that the server also   indicates the length of the protein as an integer and provides a version   in the form of a 'hash' of the sequence.  This is used to allow DAS   clients to allow a check that all the DAS sources are referring to the   same version of the protein sequence as the reference server.</p>
+        <p>In addition to being a reference server, the UniProt DAS server also   acts as an annotation server, allowing the client to query details of   features in the UniProt knowledge bank.  This also incorporates InterPro   features.</p>
+        <p>Browse to <a href="http://www.ebi.ac.uk/das-srv/uniprot/das/aristotle/features?segment=Q14974">http://www.ebi.ac.uk/das-srv/uniprot/das/aristotle/features?segment=Q14974</a></p>
+        <p>Take a careful look at the result of this search.  You should be able   to find positional features (note that the start and end coordinates of   each feature are included) including Swiss-Prot annotation and InterPro   domains, non-positional features such as a description of the protein   (with start and end coordinates of 0) and also references relating to   the protein.</p>
+        <p>As indicated above of course, the purpose of DAS is to allow you to   retrieve protein information from multiple sources at the same time.  An   example of a completely separate but compatible DAS annotation server   that is able to contribute further annotation of the same protein is   given in the next task:</p>
+        <p>Navigate to <a href="http://www.ebi.ac.uk/msd-srv/msdmotif/das/s3dm/features?segment=P05067">http://www.ebi.ac.uk/msd-srv/msdmotif/das/s3dm/features?segment=P05067</a></p>
+        <p>Here you will find additional annotation of the same protein from the   MSD Motif database at the EBI.  Notice that in this case the version is   not the same as the version from the UniProt DAS server for the same   protein accession.  A typical DAS client should note this discrepancy   and warn the user that the protein sequence being annotated is possibly   not compatible.</p>
+        <p>Navigate to <a href="http://bioinf.cs.ucl.ac.uk:8000/servlet/pdas.pdasServlet2/das/features?segment=P05067">http://bioinf.cs.ucl.ac.uk:8000/servlet/pdas.pdasServlet2/das/features?segment=P05067</a></p>
+        <p>This is the annotation server based at UCL in London that also   provides features for the same protein.  In this case the version is the   same as the UniProt DAS server.</p>
+        <p>Clearly there are potentially many different DAS servers that may   provide annotation that is useful for you.  The next section describes   how you can manually find DAS services.  After this you will look at how   DAS clients allow you to visualize DAS data, including handling the   discrepancy described above.</p>
+        <p>  </p>
+        <h2>Finding DAS sources – the DAS Registry Service at the Sanger Institute</h2>
+        <p><em>&ldquo;The purpose of the DAS registration service is to keep track   which DAS services are around, which DAS commands they are understanding   and about the coordinate systems of their data.&rdquo;</em> <a href="http://www.dasregistry.org/">http://www.dasregistry.org</a></p>
+        <p>This valuable service provides a human web interface that allows you   to search for DAS sources, test their status, examine their reliability   and learn more about what they offer.  At the time of writing, a total   of 219 servers from 36 institutions in 14 different countries are   included in the registry.</p>
+        <p>In addition to the human-searchable interface, the service can be   accessed directly and transparently by DAS clients.  This allows DAS   clients to find relevant DAS services for you without you having to   perform an exhaustive search.  </p>
+        <p>Navigate to the registry at the URL at the head of this section.</p>
+        <p>Use the search box on this page to find all DAS annotation servers that use UniProt  as their 'authority'.</p>
+        <p>Select any one of these and follow the information link to find out   details of this server including how reliable it has been recently.  You   may also wish to test it now to find out if it is supporting all of the   functionality that it claims to at the present time.</p>
+        <h2>Dasty3 – A New Client Designed for Protein DAS Display</h2>
+        <p>Dasty 3 is an example of a DAS client that is designed to display   protein features in the context of the primary protein structure.</p>
+        <p>Navigate to <a href="http://www.ebi.ac.uk/dasty/">http://www.ebi.ac.uk/dasty/</a></p>
+        <p>In the box labelled &ldquo;Protein ID&rdquo; enter the UniProt Protein Accession   Q14974,  and then   click &ldquo;GO&rdquo;.</p>
+        <p>You should now see a progress bar, with messages indicating the name   of the DAS server that data is currently being loaded from.  Note that Dasty 3 is making   direct use of the DAS registry and so you do not need to specify where   the client retrieves the data from – this is automatic.</p>
+        <p>Near the top of the page, click once on &ldquo;System Information&rdquo; and then on &ldquo;Annotation Servers Log&rdquo;.  This   will reveal the identities of all of the DAS servers that have been   queried for features of protein Q14974.</p>
+        <p>This will display a list of different DAS servers, the details   of which have been obtained from the DAS registry.  Note that when you   searched, you didn't select a particular collection of servers which means that   Dasty queried the default ones.  In practice, you may well want to   select the DAS servers included in your search.  If you look   closely at each line, you will see that the result of the search has   been recorded for each DAS server.  Results in green indicate a   successful return.  Results in red or orange indicate that either the   accession number is not included in the available results for a   particular DAS server, or that the server is not responding correctly.</p>
+        <p>Now click on &ldquo;System Information&rdquo; again to hide the DAS server list.    Then Click once on the heading &ldquo;Sequence&rdquo;  to reveal additional information about the protein.  This is   interactive and will be modified as you hover over or click on features   on the DAS tracks below.</p>
+        <p>Try clicking on different features on the DAS tracks and observe the   effect of this on the &ldquo;Sequence&rdquo; and &ldquo;3D Structure&rdquo; sections on the   page.  This allows you to gain a good appreciation of the sequence   annotated with a particular feature, as well as the reported details of   the feature.</p>
+        <p>The DAS track view includes a lot of information apart from the   tracks themselves, such as the category, type and source of each feature   track.  Coupled with the potential for the protein to be very long and   the features potentially being short or densely packed, this can make   finding the specific feature you are interested in more difficult.    Dasty 3 offers several ways of organising the way the data is displayed   that help to solve this problem.</p>
+        <p>Changing which columns are visible:  Try clicking on the different   options available immediately under the heading &ldquo;Manipulation Options&rdquo;.    You should be able to hide and show columns on the main DAS view and   change the sort order of the DAS tracks.</p>
+        <p>Zooming:  Try dragging the grey grab handles on the bar  under the heading &ldquo;Manipulation Options&rdquo;.  This will allow you to   zoom into the details of the DAS tracks and look at a smaller portion of   the protein.        </p>
+        <p>Changing the order of the DAS tracks:  You can grab an entire DAS   track with your mouse and move it up or down in the display.  This is   useful if you are interested in comparing the relative position of   different kinds of features, or perhaps even the same kinds of features   as predicted by different sources.</p>
+        <p>As described previously, DAS annotation servers are able to serve   non-positional information as well as positional features.  Typically   this is done by setting both the start and end coordinates of the   feature to 0.  Where Dasty 3 finds such features, it displays them   separately.</p>
+        <p>Scroll to the bottom of the page and click on the heading &ldquo;Non Positional Features&rdquo; which will reveal the features.  Note that this   includes references in which the protein is described as well as a   description of the protein.</p>
+        <p>&nbsp;</p>
+		<!-- InstanceEndEditable -->
+		<img src="http://www.ebi.ac.uk/inc/images/spacer.gif" class="spacer" alt="spacer" /></td><td class="rightmenucell" id="rightmenucell"><div class="rightmenu" id="rightmenu"><img src="http://www.ebi.ac.uk/inc/images/spacer.gif" class="spacer" alt="spacer" /></div></td></tr></table>
+		<table class="footerpane" id="footerpane" summary="The main footer pane of the page"><tr><td colspan ="4" class="footerrow">					
+		<div class="footerdiv" id="footerdiv"  style="z-index:2;"><iframe src="/inc/foot.html" name="foot" frameborder="0" marginwidth="0px" marginheight="0px" scrolling="no"  height="22px" width="100%"  style="z-index:2;">Your browser does not support inline frames or is currently configured not to display inline frames. Content can be viewed at actual source page: http://www.ebi.ac.uk/inc/foot.html</iframe></div></td></tr>
+		</table>
+	  <script  src="http://www.ebi.ac.uk/inc/js/footer.js" type="text/javascript"></script>
+	</div>
+</body>
+<!-- InstanceEnd --></html>

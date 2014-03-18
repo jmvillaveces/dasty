@@ -1,0 +1,13 @@
+/*button*/
+#psicquic_go_button{
+	background:none repeat scroll 0 0 #E33E3E;
+	color:#FFFFFF;
+	cursor:pointer;
+	font-size:8pt;
+	font-weight:bold;
+	margin:0;
+	padding:0;
+	text-align:center;
+	vertical-align:text-bottom;
+	width:80px;
+}

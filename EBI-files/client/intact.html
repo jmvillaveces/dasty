@@ -1,0 +1,79 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      
+		<!-- Dasty Head --> 
+			<title>Dasty - IntAct</title>
+			
+			<!-- JSDas -->
+			<script language="JavaScript" type="text/javascript" src="../JSDas/jsdas.js"></script>
+			<script language="JavaScript" type="text/javascript" src="../JSDas/XMLLoader.js"></script>
+	  		<script language="JavaScript" type="text/javascript" src="../JSDas/dasformats.js"></script>
+	   		<script language="JavaScript" type="text/javascript" src="../JSDas/parser.js"></script>
+	   		<script language="JavaScript" type="text/javascript" src="../JSDas/url.js"></script>
+			<script language="JavaScript" type="text/javascript" src="../JSDas/simple.js"></script>
+			
+			<!-- JQUERY -->
+			<script type="text/javascript" src="resources/jquery-1.4.3.min.js"></script>
+			<script type="text/javascript">
+				jQuery.noConflict();
+			</script>
+			
+			<!-- JQUERY UI -->
+			<script type="text/javascript" src="resources/jquery-ui-1.8.4.custom.min.js"></script>
+			<link rel="stylesheet"  href="resources/jquery-ui-1.8.2.custom.css"     type="text/css" /> 
+			
+			<!-- DASTY -->
+			<script type="text/javascript" src="../src/dasty.js"></script>
+			<script type="text/javascript" src="../src/eventmanager.js"></script>
+			<script type="text/javascript" src="../src/model.js"></script>
+			<script type="text/javascript" src="../src/factory.js"></script>
+			<script type="text/javascript" src="../src/parser.js"></script>
+			<script type="text/javascript" src="../src/global.js"></script>
+			<script type="text/javascript" src="../src/jsdasmanager.js"></script>
+			<script type="text/javascript" src="../src/controller.js"></script>
+			<script type="text/javascript" src="../src/loader.js"></script>
+			<script type="text/javascript" src="../src/templatemanager.js"></script>
+			<script type="text/javascript" src="../src/errormanager.js"></script>
+			<script type="text/javascript" src="../src/pluginmanager.js"></script>
+			<script type="text/javascript" src="../src/log.js"></script>
+			<script type="text/javascript" src="../src/configurationmanager.js"></script>
+			<script type="text/javascript" src="../src/ontologymanager.js"></script>
+			<script type="text/javascript" src="../src/stylesheetmanager.js"></script>
+	
+			<!-- TEMPLATE -->
+			<script type="text/javascript" src="templates/intact_layout/intact_layout.js"></script>
+			<link rel="stylesheet"  href="templates/intact_layout/intact_layout.css"   type="text/css" />
+			
+			<script language='JavaScript'>
+			/* Config for Simple Search plugin
+			*  Follow the example below.
+			*  To select categories: {uri:'X', title: 'Y', categories:{selected:['Z','...']}}
+			*  To unselect categories: {uri:'X', title: 'Y', categories:{unselected:['Z','...']}}
+			*/
+				DASTY = DASTY || {};
+				
+				var simple_config = {
+					id: 'P05067',
+					sources:[
+						{uri:'http://www.ebi.ac.uk/das-srv/uniprot/das/uniprot/', title: 'UniProt'},
+						{uri:'http://www.ebi.ac.uk/intact/das/intact/', title: 'IntAct'},
+						{uri:'http://www.ebi.ac.uk/das-srv/interpro/das/InterPro-matches-overview/', title: 'InterPro'},
+						{uri:'http://www.ebi.ac.uk/pride-das/das/PrideDataSource/', title: 'PRIDE', categories:{selected:['hello','coverage','ptm_modification','8670','1642']}}
+					]
+				}
+				DASTY.externalConfig = simple_config;
+			</script>
+    	<!-- End Dasty Head -->
+	</head>
+	
+    <body> 
+							
+		<!-- Start Dasty Body -->
+		<div id="DASTY" style="width:90%;"></div>
+		<!-- End Dasty Body -->
+
+</body>
+</html>

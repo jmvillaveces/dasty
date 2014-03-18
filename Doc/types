@@ -1,0 +1,24 @@
+Plugin Types:
+
+Filter
+Search
+Display
+Alignment
+Misc
+
+plugin vars:
+
+id, description, type
+
+for filtering .filter(features) method is requiered
+
+
+{"js":"plugins/sequence/sequence.js"},
+		{"js":"plugins/search/search.js"},
+		{"js":"plugins/logger/logger.js"},
+		{"js":"plugins/error_dialog/error_dialog.js"},
+		{"js":"plugins/category_filter/category_filter.js"},
+		{"js":"plugins/feature_types_filter/feature_types_filter.js"},
+		{"js":"plugins/checking/checking.js", "css":"plugins/checking/checking.css"},
+		{"js":"plugins/server_filter/serverfilter.js"},
+		{"js":"plugins/non_positional_features/non_positional_features.js", "css":"plugins/non_positional_features/style.css"}

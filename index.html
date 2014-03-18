@@ -1,0 +1,386 @@
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!-- Consider adding an manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+
+  <!-- Use the .htaccess and remove these lines to avoid edge case issues.
+       More info: h5bp.com/b/378 -->
+  <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> --> <!-- Not yet implemented -->
+
+  <title>DASty &lt; EMBL-EBI</title>
+  <meta name="description" content="EMBL-EBI"><!-- Describe what this page is about -->
+  <meta name="keywords" content="bioinformatics, europe, institute"><!-- A few keywords that relate to the content of THIS PAGE (not the whol project) -->
+  <meta name="author" content="EMBL-EBI"><!-- Your [project-name] here -->
+
+  <!-- Mobile viewport optimized: j.mp/bplateviewport -->
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
+
+  <!-- CSS: implied media=all -->
+  <!-- CSS concatenated and minified via ant build script-->
+  <link rel="stylesheet" href="//www.ebi.ac.uk/web_guidelines/css/compliance/develop/boilerplate-style.css">
+  <link rel="stylesheet" href="//www.ebi.ac.uk/web_guidelines/css/compliance/develop/ebi-global.css" type="text/css" media="screen">
+  <link rel="stylesheet" href="//www.ebi.ac.uk/web_guidelines/css/compliance/develop/ebi-visual.css" type="text/css" media="screen">
+  <link rel="stylesheet" href="//www.ebi.ac.uk/web_guidelines/css/compliance/develop/984-24-col-fluid.css" type="text/css" media="screen">
+  
+  <!-- you can replace this with [projectname]-colours.css. See http://frontier.ebi.ac.uk/web/style/colour for details of how to do this -->
+  <!-- also inform ES so we can host your colour palette file -->
+  <link rel="stylesheet" href="//www.ebi.ac.uk/web_guidelines/css/compliance/develop/embl-petrol-colours.css" type="text/css" media="screen">
+ 
+ 
+ 
+<!-- DASTY colour palet -->
+  <link rel="stylesheet"  href="client/templates/ebi_layout_2013/dasty-colours.css"   type="text/css" />
+<!-- end DASTY colour palet -->
+
+
+
+  <!-- for production the above can be replaced with -->
+  <!--
+  <link rel="stylesheet" href="//www.ebi.ac.uk/web_guidelines/css/compliance/mini/ebi-fluid-embl.css">
+  -->
+
+  <style type="text/css">
+  	/* You have the option of setting a maximum width for your page, and making sure everything is centered */
+  	body { max-width: 1600px; margin: 0 auto; }
+  </style>
+  
+  <!-- end CSS-->
+
+
+  <!-- All JavaScript at the bottom, except for Modernizr / Respond.
+       Modernizr enables HTML5 elements & feature detects; Respond is a polyfill for min/max-width CSS3 Media Queries
+       For optimal performance, use a custom Modernizr build: www.modernizr.com/download/ -->
+  
+  <!-- Full build -->
+  <script src="//www.ebi.ac.uk/web_guidelines/js/libs/modernizr.minified.2.1.6.js"></script>
+  
+  <!-- custom build (lacks most of the "advanced" HTML5 support -->
+  <!-- <script src="//www.ebi.ac.uk/web_guidelines/js/libs/modernizr.custom.49274.js"></script> -->	
+  
+
+		<!-- Dasty Specific Head --> 
+			<!-- JQUERY -->
+			<script type="text/javascript" src="client/resources/jquery-1.4.3.min.js"></script>		
+			<!-- JQUERY UI -->
+			<script type="text/javascript" src="client/resources/jquery-ui-1.8.4.custom.min.js"></script>
+			<link rel="stylesheet"  href="client/resources/jquery-ui-1.8.2.custom.css"     type="text/css" /> 
+			<link rel="stylesheet"  href="client/resources/dasty.css"     type="text/css" /> 
+
+</head>
+
+<body class="level2"><!-- add any of your classes or IDs -->
+	<div id="skip-to">
+		<ul>
+			<li><a href="#content">Skip to main content</a></li>
+			<li><a href="#local-nav">Skip to local navigation</a></li>
+			<li><a href="#global-nav">Skip to EBI global navigation menu</a></li>
+			<li><a href="#global-nav-expanded">Skip to expanded EBI global navigation menu (includes all sub-sections)</a></li>
+		</ul>
+	</div>
+
+  <div id="wrapper" class="container_24">
+    <header>
+    	<div id="global-masthead" class="masthead grid_24">
+      <!--This has to be one line and no newline characters-->
+			<a href="//www.ebi.ac.uk/" title="Go to the EMBL-EBI homepage"><img src="//www.ebi.ac.uk/web_guidelines/images/logos/EMBL-EBI/EMBL_EBI_Logo_white.png" alt="EMBL European Bioinformatics Institute"></a>
+
+			<nav>
+				<ul id="global-nav">
+          <!-- set active class as appropriate -->
+          <li class="first active" id="services"><a href="//www.ebi.ac.uk/services">Services</a></li>
+					<li id="research"><a href="//www.ebi.ac.uk/research">Research</a></li>
+					<li id="training"><a href="//www.ebi.ac.uk/training">Training</a></li>
+					<li id="industry"><a href="//www.ebi.ac.uk/industry">Industry</a></li>
+					<li id="about" class="last"><a href="//www.ebi.ac.uk/about">About us</a></li>
+				</ul>
+			</nav>
+			
+		</div>
+		
+		<div id="local-masthead" class="masthead grid_24 nomenu">
+	
+      <!-- local-title -->
+      <!-- NB: for additional title style patterns, see http://frontier.ebi.ac.uk/web/style/patterns -->
+
+						
+			<div id="local-title" class="grid_12 alpha logo-title">
+				<a href="#" title="Back to DASty homepage">
+					<img src="client/resources/DASty_logo.png" alt="DASty logo" width="64" height="64">
+				</a>
+				<span>
+					<h1>DASty</h1>
+				</span>
+			</div>
+      
+      <!-- /local-title -->
+
+      <!-- local-search -->
+      <!-- NB: if you do not have a local-search, delete the following div, and drop the class="grid_12 alpha" class from local-title above -->
+      
+			<div class="grid_12 omega">
+				<form id="local-search" name="local-search" action="client/index.html" method="get">
+								
+					<fieldset>
+					
+					<div class="left">
+						<label>
+						<input type="text" name="q" id="local-searchbox">
+						</label>
+						<!-- Include some example searchterms - keep them short and few! -->
+						<span class="examples">Examples: <a href="client/index.html?q=P05067">P05067</a>, <a href="client/index.html?q=P43379">P43379</a>, <a href="client/index.html?q=Q06609">Q06609</a></span>
+					</div>
+					
+					<div class="right">
+						<input type="submit" name="submit" value="Search" class="submit">					
+						<!-- If your search is more complex than just a keyword search, you can link to an Advanced Search,
+						     with whatever features you want available -->
+						<!-- <span class="adv"><a href="../search" id="adv-search" title="Advanced">Advanced</a></span> -->
+					</div>									
+					
+					</fieldset>
+					
+				</form>
+			</div>
+
+      <!-- /local-search -->
+
+      <!-- local-nav -->
+      
+			<nav>
+				<ul class="grid_24" id="local-nav">
+					<li class="first active"><a href="index.html" title="Home">Home</a></li>
+					<!--
+					<li><a href="#">Documentation</a></li>
+					<li><a href="#">Help</a></li>
+					-->
+					<li><a href="http://code.google.com/p/dasty/" target="_blank">About DASty</a></li>
+					<li class="last"><a href="http://www.ebi.ac.uk/support" title="Contact us">Contact us</a></li>
+					<!-- If you need to include functional (as opposed to purely navigational) links in your local menu,
+					     add them here, and give them a class of "functional". Remember: you'll need a class of "last" for
+					     whichever one will show up last... 
+					     For example: -->
+					<!--
+					<li class="functional last"><a href="#" class="icon icon-functional" data-icon="l">Login</a></li>
+					<li class="functional"><a href="#" class="icon icon-generic" data-icon="\">Feedback</a></li>
+					<li class="functional"><a href="#" class="icon icon-functional" data-icon="r">Share</a></li>
+					-->
+				</ul>
+			</nav>		
+  
+      <!-- /local-nav -->
+
+    </div>
+    </header>
+               
+    <div id="content" role="main" class="grid_24 clearfix">
+    
+    <!-- If you require a breadcrumb trail, its root should be your service.
+     	   You don't need a breadcrumb trail on the homepage of your service... -->
+	<!--	   
+    <nav id="breadcrumb">
+     	<p>
+		    <a href="[service-url]">[service-name]</a> &gt; 
+		    [page-title]
+			</p>
+  	</nav>
+	-->
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	<!-- Start Dasty content --> 
+		<section class="grid_24">	
+			<section class="grid_24 alpha">
+    			<h2 class="strapline">Visualization and integration of protein sequence feature annotations via DAS</h2><br/>							
+			</section>	
+	
+			<section class="grid_8 alpha documentation">
+	    		<h3>Documentation</h3>
+	    		<h4><a href="http://code.google.com/p/dasty/" target="_blank">About DASty</a></h4>
+				<p>General information about DASty and the open source project</p>
+				<h4><a href="http://www.biodas.org/wiki/Main_Page" target="_blank">About DAS</a></h4><p>Information about the Distributed Annotation System (DAS)</p>
+				<h4><a href="http://code.google.com/p/jsdas/" target="_blank">About jsDAS</a></h4><p>JavaScript library for DAS </p>	
+				<h4><a href="http://code.google.com/p/dasty/wiki/DasAndDastyTutorial" target="_blank">User guide</a></h4><p>Tutorials for users about how to work with DASty</p>
+				<h4><a href="http://code.google.com/p/dasty/wiki/InformationDevelopers" target="_blank">Installation</a></h4><p>Tutorials for developers about how to install and configure DASty</p>	
+			</section>
+			
+			<section class="grid_8 publications">
+				<h3>Publications</h3>
+					<h4><cite><a href="http://europepmc.org/abstract/MED/21798964" class="external" title="Find this paper on Europe PubMed Central">DASty3, a WEB framework for DAS</a></cite></h4>
+					<p>Villaveces JM et al.<br>
+					Bioinformatics, 2011</p>
+					
+					<h4><cite><a href="http://europepmc.org/abstract/MED/18694895" class="external" title="Find this paper on Europe PubMed Central">DASty2, an Ajax protein DAS client.</a></cite></h4>
+					<p>Jimenez RC et al.<br>
+					Bioinformatics, 2008</p>
+					
+					<h4><cite><a href="http://europepmc.org/abstract/MED/18673527" class="external" title="Find this paper on Europe PubMed Central">Integrating biological data - the Distributed Annotation System.</a></cite></h4>
+					<p>Jenkinson AM et al.<br>
+					BMC bioinformatics, 2008</p>
+									
+					<h4><cite><a href="http://europepmc.org/abstract/MED/15905273" class="external" title="Find this paper on Europe PubMed Central">DASty and UniProt DAS: a perfect pair for protein feature visualization.</a></cite></h4>
+					<p>Jones P et al.<br>
+					Bioinformatics, 2005</p>					
+			</section>
+
+			<section class="grid_8 omega">
+	    		<h3>Search examples</h3>
+		    		<table>
+						<tr><td class="dastyCol01">Accession:</td><td><a class="dastyHighlightText" href="client/index.html?q=P05067">P05067</a></td></tr>
+						<tr><td class="dastyCol01">Entry name:</td><td class="dastyText85"><a href="client/index.html?q=A4_HUMAN">A4_HUMAN</a></td></tr>
+						<tr><td class="dastyCol01">Species:</td><td class="dastyText85">Homo sapiens</td></tr>
+						<tr><td class="dastyCol02" colspan="2">Amyloid beta A4 protein</td></tr>
+		    		</table>		
+					<table>
+		    			
+						<tr><td class="dastyCol01">Accession:</td><td><a class="dastyHighlightText" href="client/index.html?q=P43379">P43379</a></td></tr>
+						<tr><td class="dastyCol01">Entry name:</td><td class="dastyText85"><a href="client/index.html?q=CDGT2_BACCI">CDGT2_BACCI</a></td></tr>
+						<tr><td class="dastyCol01">Species:</td><td class="dastyText85">Bacillus circulans</td></tr>
+						<tr><td class="dastyCol02" colspan="2">Cyclodextrin glycosyltransferase</td></tr>
+		    		</table>							
+			</section>
+			
+		</section>	
+		
+
+	<!-- End Dasty content --> 		
+		
+	
+	
+	
+	
+	
+	
+	
+	
+
+			
+    </div>
+    
+    
+    <footer>
+    <!-- Optional local footer (insert citation / project-specific copyright / etc here -->
+		  
+      <div id="local-footer" class="grid_24 clearfix">
+			<p class="grid_24">
+				<div class="main-right-box">
+					<div class="dastyHighlightText">Acknowledgements</div>
+					<p id="dastyAcknoledgements" class="dastyText77">
+						<img src="ebi/resources/logo_eu_small.gif" />
+						<img src="ebi/resources/biosapiens.gif" />
+						<img src="ebi/resources/nhlbi-ucla.gif" />
+						<img src="ebi/resources/enfin.gif" />
+						<img src="ebi/resources/aposys.gif" />
+						<img src="ebi/resources/logo_proteomics_small.gif" />
+						<img src="ebi/resources/intact.gif" />
+						<img src="ebi/resources/uniprot.gif" />
+						<img src="ebi/resources/logo_nbn_cbio.gif" />
+						<br/>
+						DASty was developed as part of the <a href="www.biosapiens.info">BioSapiens Network of Excellence</a> funded by the 
+						European Commission within its <a href="ec.europa.eu/research/fp6">FP6 Programme</a> (LSHG-CT-2003-503265). Development 
+						contributions also came from the <a href="http://www.nhlbi-proteomics.org/pages/centers-ucla-ping">NHLBI Proteomics Center</a> Award (HHSN268201000035C), 
+						as well as the European Commission grants <a href="http://www.enfin.org/">ENFIN</a> (LSHG-CT-2005-518254) and 
+						<a href="http://www.apo-sys.eu/">APO-SYS</a> (FP7-HEALTH-2007-200767). Several groups like 
+						the <a href="http://www.ebi.ac.uk/proteomics/">Proteomics Services</a>, 
+						<a href="http://www.ebi.ac.uk/intact/">IntAct</a>, <a href="http://www.uniprot.org/">UniProt</a> 
+						and <a href="http://www.cbio.uct.ac.za/">CBIO</a> did also contribute to the project.
+					</p>
+				</div>						
+			</p>
+	</div>
+      
+		<!-- End optional local footer -->
+		
+		<div id="global-footer" class="grid_24">
+						
+			<nav id="global-nav-expanded">
+				
+				<div class="grid_4 alpha">
+					<h3 class="embl-ebi"><a href="//www.ebi.ac.uk/" title="EMBL-EBI">EMBL-EBI</a></h3>
+				</div>
+				
+				<div class="grid_4">
+					<h3 class="services"><a href="//www.ebi.ac.uk/services">Services</a></h3>
+				</div>
+				
+				<div class="grid_4">
+					<h3 class="research"><a href="//www.ebi.ac.uk/research">Research</a></h3>
+				</div>
+				
+				<div class="grid_4">
+					<h3 class="training"><a href="//www.ebi.ac.uk/training">Training</a></h3>
+				</div>
+				
+				<div class="grid_4">
+					<h3 class="industry"><a href="//www.ebi.ac.uk/industry">Industry</a></h3>
+				</div>
+				
+				<div class="grid_4 omega">
+					<h3 class="about"><a href="//www.ebi.ac.uk/about">About us</a></h3>
+				</div>
+
+			</nav>
+			
+			<section id="ebi-footer-meta">
+				<p class="address">EMBL-EBI, Wellcome Trust Genome Campus, Hinxton, Cambridgeshire, CB10 1SD, UK &nbsp; &nbsp; +44 (0)1223 49 44 44</p>
+				<p class="legal">Copyright &copy; EMBL-EBI 2013 | EBI is an Outstation of the <a href="http://www.embl.org">European Molecular Biology Laboratory</a> | <a href="/about/privacy">Privacy</a> | <a href="/about/cookies">Cookies</a> | <a href="/about/terms-of-use">Terms of use</a></p>	
+			</section>
+
+		</div>
+		
+    </footer>
+  </div> <!--! end of #wrapper -->
+
+
+  <!-- JavaScript at the bottom for fast page loading -->
+
+  <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+  <!--
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="../js/libs/jquery-1.6.2.min.js"><\/script>')</script>
+  -->
+
+
+  <!-- Your custom JavaScript file scan go here... change names accordingly -->
+  <!--
+  <script defer="defer" src="//www.ebi.ac.uk/web_guidelines/js/plugins.js"></script>
+  <script defer="defer" src="//www.ebi.ac.uk/web_guidelines/js/script.js"></script>
+  -->
+  <script defer="defer" src="//www.ebi.ac.uk/web_guidelines/js/cookiebanner.js"></script>  
+  <script defer="defer" src="//www.ebi.ac.uk/web_guidelines/js/foot.js"></script>
+  <!-- end scripts-->
+
+  <!-- Google Analytics details... -->		
+  <!-- Change UA-XXXXX-X to be your site's ID -->
+  <!--
+  <script>
+    window._gaq = [['_setAccount','UAXXXXXXXX1'],['_trackPageview'],['_trackPageLoadTime']];
+    Modernizr.load({
+      load: ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js'
+    });
+  </script>
+  -->
+
+
+  <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
+       chromium.org/developers/how-tos/chrome-frame-getting-started -->
+  <!--[if lt IE 7 ]>
+    <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+    <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+  <![endif]-->
+  
+</body>
+</html>

@@ -1,0 +1,43 @@
+{
+	"refServer": "http://www.ebi.ac.uk/das-srv/uniprot/das/uniprot/",
+	"dastyContainerId": "DASTY",
+	"templateId": "ebi_layout_3",
+	"get_sources_from_registry": "true",
+	"registry_query": "http://www.dasregistry.org/das1/sources?authority=UniProt&type=protein+sequence",
+	"proxy_url":"../proxy/proxy.php",
+	"sources": [
+		{
+			"title":"dev_uniprot", 
+			"uri":"http://jweb-2b.ebi.ac.uk:21280/das-srv/uniprot/das/uniprot/",
+			"type":"das1:features",
+			"query_uri":"http://jweb-2b.ebi.ac.uk:21280/das-srv/uniprot/das/uniprot/features",
+			"props": [{"name":"label", "value":"biosapiens"}]
+		}
+	],
+	"coordinateSystem": {
+		"id": "CS_DS6",
+		"authority": "UniProt",
+		"version": "",
+		"type": "Protein Sequence",
+		"organism": "",
+		"ncbi_id": ""
+	},
+	"default_plugins": [
+		{"js":"plugins/search/search.js", "css":"plugins/search/search.css"},
+		{"js":"plugins/sequence/sequence.js"},
+		{"js":"plugins/logger/logger.js", "css":"plugins/logger/logger.css"},
+		{"js":"plugins/checking/checking.js"},
+		{"js":"plugins/writeback/writeback_filter.js", "css":"plugins/writeback/writeback.css"},
+		{"js":"plugins/writeback/writeback.js"},
+		{"js":"plugins/Jmol/Jmol.js"},
+		{"js":"plugins/server_filter/server_filter.js", "css": "plugins/server_filter/resources/css/olscheckboxtree.css"},
+		{"js":"plugins/bio_sapiens_filter/bio_sapiens_filter.js", "css": "plugins/bio_sapiens_filter/resources/css/olscheckboxtree.css"},
+		{"js":"plugins/evidence_code_filter/evidence_code_filter.js", "css": "plugins/evidence_code_filter/resources/css/olscheckboxtree.css"},
+		{"js":"plugins/prot_mod_filter/prot_mod_filter.js", "css": "plugins/prot_mod_filter/resources/css/olscheckboxtree.css"},
+		{"js":"plugins/sequence_ontology_filter/sequence_ontology_filter.js", "css": "plugins/sequence_ontology_filter/resources/css/olscheckboxtree.css"},
+		{"js":"plugins/non_positional_features/non_positional_features2.js", "css":"plugins/non_positional_features/style.css"},
+		{"js":"plugins/positional_features/positional_features.js", "css":"plugins/positional_features/style.css"},
+		{"js":"plugins/picr/picr.js", "css":"plugins/picr/picr.css"},
+		{"js":"plugins/interactions/interactions.js", "css":"plugins/interactions/interactions.css"}
+	]
+}

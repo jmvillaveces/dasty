@@ -1,0 +1,8 @@
+.ebi_layout_maintitle {
+	background:url("resources/img/ebi_bg.gif") repeat-y scroll 0 0 transparent;
+	display:block;
+	margin-bottom:5px;
+	padding:2px;
+	font-weight:bold;
+	text-decoration:none;
+}

@@ -1,0 +1,34 @@
+-------- DAS Related Events ------------------
+
+search_started
+search_done
+getting_sources
+got_sources
+getting_sequence
+got_sequence
+getting_stylesheet
+got_stylesheet
+getting_annotations
+got_annotations
+
+error_getting_annotations
+error_getting_sequence
+error_getting_stylesheet
+
+-------------- DASTY EVENTS --------------
+
+repaint
+plugin_on
+plugin_off
+plugin_loaded
+template_loaded
+config_loaded
+segment_changed
+reference_server_changed
+init_plugins
+filter_changed
+filters_applied
+new_log
+
+-------- Positional features events ----------------
+selected_feature return {start, end} 

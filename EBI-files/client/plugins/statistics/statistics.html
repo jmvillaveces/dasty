@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+		<title>Dasty 3 Statistics</title>
+		<link rel="stylesheet" type="text/css" href="css/statistics.css" />
+		<link rel="stylesheet" type="text/css" href="css/ingrid.css" />
+		<link rel="stylesheet" type="text/css" href="css/jquery-ui-1.8.5.custom.css" />
+		<link rel="stylesheet" type="text/css" href="css/visualize.css" />
+		<link rel="stylesheet" type="text/css" href="css/visualize-light.css" />
+		
+		<script type="text/javascript" src="../../resources/jquery-1.4.3.min.js"></script>
+		<script type="text/javascript" src="js/jquery-ui-1.8.5.custom.min.js"></script>
+		<script type="text/javascript" src="js/statistics.js"></script>
+		<script type="text/javascript" src="js/jquery.ingrid.js"></script>
+		<script type="text/javascript" src="js/visualize.jQuery.js"></script>
+		<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+	</head>
+	<body>
+		<table width="100%" height="100%">
+			<tr>
+				<td ><div id="map" class="round" style="height:400px"></div></td>
+			</tr>
+			<tr>
+				<td>
+					<div id="toolbar" class="round">
+						<button id="protid">Hits per Protein</button>
+						<button id="loc">Hits per Location</button>
+						<button id="ip">Hits per IP</button>
+						<button id="os">Hits per Operative System</button>
+						<button id="browser">Hits per Browser</button>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td width="100%" height="50%"><div id="table" class="round"></div></td>
+			</tr>
+		</table>
+		<div id="protid_dial"></div>
+		<div id="loc_dial"></div>
+	</body>
+</html>

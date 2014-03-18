@@ -1,0 +1,33 @@
+{
+	"sequence":{
+		"format":"RAW",
+		"selection":{"start":"392", "end":"628"}
+	},
+	"search": {
+		"sources":["DS_409","DS_114","DS_171","DS_342","DS_866", "DS_1436"],
+		"proteinId":"P13569"
+	},
+	"positional_features":{
+		"zoom":{"start":"392", "end":"628"},
+		"selectedColumns":["","",""],
+		"retainPopups":"false"
+	},
+	"non_positional_features":{
+		"selectedColumns":["","",""]
+	},
+	"pickr":{
+		"selectedDB":["","",""]
+	},
+	"bs_filter":{
+		"unselected_ids":["BS:01003"]
+	},
+	"eco_filter":{
+		"unselected_ids":["ECO:0000001"]
+	},
+	"so_filter":{
+		"unselected_ids":["SO:0000104"]
+	},
+	"mod_filter":{
+		"unselected_ids":["MOD:01156"]
+	}
+}

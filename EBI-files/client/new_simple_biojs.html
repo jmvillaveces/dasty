@@ -1,0 +1,74 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		
+		<!-- Dasty Specific Head --> 
+			<title>Dasty</title>
+			
+			<!-- JSDas -->
+			<!--<script language="JavaScript" type="text/javascript" src="../JSDas/jsdas.0.1.2.min.js"></script>-->
+			<script language="JavaScript" type="text/javascript" src="../JSDas/jsdas.js"></script>
+			<script language="JavaScript" type="text/javascript" src="../JSDas/XMLLoader.js"></script>
+	  		<script language="JavaScript" type="text/javascript" src="../JSDas/dasformats.js"></script>
+	   		<script language="JavaScript" type="text/javascript" src="../JSDas/parser.js"></script>
+	   		<script language="JavaScript" type="text/javascript" src="../JSDas/url.js"></script>
+			<script language="JavaScript" type="text/javascript" src="../JSDas/simple.js"></script>
+			
+			<!-- JQUERY -->
+			<script type="text/javascript" src="resources/jquery-1.4.3.min.js"></script>
+			
+			<script type="text/javascript">
+				jQuery.noConflict();
+			</script>
+			
+			<!-- JQUERY UI -->
+			<script type="text/javascript" src="resources/jquery-ui-1.8.4.custom.min.js"></script>
+			<link rel="stylesheet"  href="resources/jquery-ui-1.8.2.custom.css" type="text/css" />
+			
+			<!--BIOJS-->
+			<script type="text/javascript" src="../biojs/javascript/Biojs.js"></script>
+			<script type="text/javascript" src="../biojs/javascript/Biojs.Sequence.js"></script> 
+	<!-- End Dasty Specific Head -->
+	
+	</head>
+	<body>
+		<div id="DASTY"></div> 
+	</body>
+	
+	<!-- DASTY -->
+	<script type="text/javascript" src="../src/dasty.js"></script>
+	<script type="text/javascript" src="../src/eventmanager.js"></script>
+	<script type="text/javascript" src="../src/model.js"></script>
+	<script type="text/javascript" src="../src/factory.js"></script>
+	<script type="text/javascript" src="../src/parser.js"></script>
+	<script type="text/javascript" src="../src/global.js"></script>
+	<script type="text/javascript" src="../src/jsdasmanager.js"></script>
+	<script type="text/javascript" src="../src/controller.js"></script>
+	<script type="text/javascript" src="../src/loader.js"></script>
+	<script type="text/javascript" src="../src/templatemanager.js"></script>
+	<script type="text/javascript" src="../src/errormanager.js"></script>
+	<script type="text/javascript" src="../src/pluginmanager.js"></script>
+	<script type="text/javascript" src="../src/log.js"></script>
+	<script type="text/javascript" src="../src/configurationmanager.js"></script>
+	<script type="text/javascript" src="../src/ontologymanager.js"></script>
+	<script type="text/javascript" src="../src/stylesheetmanager.js"></script>
+	
+	<!-- TEMPLATE -->
+	<script type="text/javascript" src="templates/ebi_layout_4/ebi_layout_4.js"></script>
+	<link rel="stylesheet"  href="templates/ebi_layout_4/ebi_layout_4.css" type="text/css" />	
+</html>
+<script language='JavaScript'>
+		//Default config for Simple Search
+		DASTY = DASTY || {};
+		
+		var simple_config = {
+			id: 'P05067',
+			sources:[
+				{uri:'http://wwwdev.ebi.ac.uk/das-srv/uniprot/das/uniprot/', title: 'UniProtDev'}
+				//{uri:'http://wwwdev.ebi.ac.uk/das-srv/uniprot/das/uniprot/', title: 'Pride'}
+			]
+		}
+		DASTY.externalConfig = simple_config;
+</script>

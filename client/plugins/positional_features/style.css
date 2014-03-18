@@ -1,0 +1,108 @@
+/* tables */
+table.positional_features_table{
+	font-family:arial;
+	font-size: 8pt;
+	width: 1200px;
+	table-layout:fixed;
+	text-align: left;
+	border:1px solid #CCCCCC;
+	border-collapse:collapse;
+}
+table.positional_features_table thead tr th, table.positional_features_table tfoot tr th {
+	background-color: #e6EEEE;
+	border: 1px solid #FFF;
+	font-size: 8pt;
+	/*padding: 0px;*/
+	border:1px solid #CCCCCC;
+	text-align: left
+}
+table.positional_features_table thead tr .header {
+	background-image: url(resources/images/bg.gif);
+	background-repeat: no-repeat;
+	background-position: center right;
+	cursor: pointer;
+}
+table.positional_features_table tbody td {
+	color: #3D3D3D;
+	/*padding: 0px;*/
+	vertical-align: top;
+	overflow:hidden; 
+	white-space:nowrap;
+	/*word-wrap: break-word;*/
+	border:1px solid #CCCCCC;
+}
+table.positional_features_table tbody tr.odd td {
+	background-color:#CCCCCC;
+}
+table.positional_features_table thead tr .headerSortUp {
+	background-image: url(resources/images/asc.gif);
+}
+table.positional_features_table thead tr .headerSortDown {
+	background-image: url(resources/images/desc.gif);
+}
+table.positional_features_table thead tr .headerSortDown, table.positional_features_table thead tr .headerSortUp {
+background-color: #8dbdd8;
+}
+
+/*Drag Handle*/
+td.showDragHandle{
+	background-image: url(resources/images/bg.gif);
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+/* Scale */
+#gr_scalebar_ul  {
+	position:relative;
+	z-index:2;
+}
+.gr_scalebar {
+	list-style-type:none;
+	margin:0 0 0;
+	padding:0;
+}
+.gr_scalebar_div  {
+	background-color:#CCCCCC;
+	/*opacity:0.1;*/
+}
+.gr_div {
+	margin:0;
+	padding:0;
+	position:absolute;
+	text-align:left;
+	vertical-align:middle;
+}
+.gr_scalebar_span {
+	margin:0;
+	padding:0;
+	position:absolute;
+	text-align:left;
+	vertical-align:middle;
+	font-family:Verdana,Arial,Helvetica,sans-serif;
+	font-size:8pt;
+}
+
+/* Manipulation Options*/
+.positional_features_chk {
+  float: left;
+  width: 25%;
+}
+.positional_features_sl {
+  clear:both;
+  width: 50%;
+}
+.positional_features_parent {
+  clear:both;
+  width: 100%;
+}
+.positional_features_butt{
+	background:none repeat scroll 0 0 #E33E3E;
+	color:#FFFFFF;
+	cursor:pointer;
+	font-size:8pt;
+	font-weight:bold;
+	margin:0;
+	padding:0;
+	text-align:center;
+	vertical-align:text-bottom;
+}

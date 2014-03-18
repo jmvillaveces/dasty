@@ -1,0 +1,27 @@
+body {
+	padding: 2em;
+	background-color:#21373D;
+	background-image:url("images/templatemo_body.png");
+	background-repeat:repeat;
+	color:#FFFFFF;
+	font-family:Helevetica,Arial,sans-serif;
+	font-size:13px;
+	line-height:1.5em;
+	margin:0;
+	padding:0;
+}
+
+.round {
+	margin: 1em;
+	border: 2px solid #6D8D95;
+	padding: 2em;
+	overflow-x: auto;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+table {width: 100%;}
+table.accessHide {position: absolute; left: -999999px;}
+td, th {font-size: 1.2em; padding: 2px; width: 13%;}
+th {background-color:#D3D3D3; color:#000000;}
+caption {font-size: 1.7em;}

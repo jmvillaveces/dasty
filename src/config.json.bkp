@@ -1,0 +1,73 @@
+{
+	"refServer": "http://www.ebi.ac.uk/das-srv/uniprot/das/uniprot/",
+	"dastyContainerId": "DASTY",
+	"templateId": "ebi_layout",
+	"get_sources_from_registry": "false",
+	"registry_query": "http://www.dasregistry.org/das1/sources?authority=UniProt&type=protein%20sequence",
+	"show_alerts": "true",
+	"sources": [
+		{
+			"title":"uniprot", 
+			"uri":"http://www.ebi.ac.uk/das-srv/uniprot/das/uniprot/",
+			"type":"das1:features",
+			"query_uri":"http://www.ebi.ac.uk/das-srv/uniprot/das/uniprot/features",
+			"props": [{"name":"bio sapiens", "value":"biosapiens"}]
+		},
+		{
+			"title":"signalp", 
+			"uri":"http://das.cbs.dtu.dk:9000/das/signalp/",
+			"type":"das1:features",
+			"query_uri":"http://das.cbs.dtu.dk:9000/das/signalp/features",
+			"props": [{"name":"bio sapiens", "value":"biosapiens"}]
+		},
+		{
+			"title":"netphos", 
+			"uri":"http://das.cbs.dtu.dk:9000/das/netphos/",
+			"type":"das1:features",
+			"query_uri":"http://das.cbs.dtu.dk:9000/das/netphos/features",
+			"props": [{"name":"bio sapiens", "value":"biosapiens"}]
+		},
+		{
+			"title":"pride das 1.6", 
+			"uri":"pride das 1.6",
+			"type":"das1:features",
+			"query_uri":"http://jweb-2b.ebi.ac.uk:21390/pride-das/das/PrideDataSource/features",
+			"props": [{"name":"bio sapiens", "value":"biosapiens"}]
+		}
+		{
+			"title":"pride das 1.6", 
+			"uri":"pride das 1.6",
+			"type":"das1:features",
+			"query_uri":"http://www.ebi.ac.uk/pride-das/das/PrideDataSource/features",
+			"props": [{"name":"bio sapiens", "value":"biosapiens"}]
+		},
+		{
+			"title":"uniprot", 
+			"uri":"http://www.ebi.ac.uk/das-srv/uniprot/das/uniprot/",
+			"type":"das1:features",
+			"query_uri":"http://www.ebi.ac.uk/das-srv/uniprot/das/uniprot/features",
+			"props": [{"name":"bio sapiens", "value":"biosapiens"}]
+		},
+	],
+	"coordinateSystem": {
+		"id": "CS_DS6",
+		"authority": "UniProt",
+		"version": "",
+		"type": "Protein Sequence",
+		"organism": "",
+		"ncbi_id": ""
+	},
+	"default_plugins": [
+		{"js":"plugins/search/search.js", "css":"plugins/search/search.css"},
+		{"js":"plugins/sequence/sequence.js"},
+		{"js":"plugins/Jmol/Jmol.js"},
+		{"js":"plugins/logger/logger.js", "css":"plugins/logger/logger.css"},
+		{"js":"plugins/checking/checking.js"},
+		{"js":"plugins/bio_sapiens_filter/bio_sapiens_filter.js", "css": "plugins/bio_sapiens_filter/resources/olscheckboxtree.css"},
+		{"js":"plugins/evidence_code_filter/evidence_code_filter.js", "css": "plugins/evidence_code_filter/resources/olscheckboxtree.css"},
+		{"js":"plugins/prot_mod_filter/prot_mod_filter.js", "css": "plugins/prot_mod_filter/resources/olscheckboxtree.css"},
+		{"js":"plugins/sequence_ontology_filter/sequence_ontology_filter.js", "css": "plugins/sequence_ontology_filter/resources/olscheckboxtree.css"},
+		{"js":"plugins/non_positional_features/non_positional_features.js", "css":"plugins/non_positional_features/style.css"},
+		{"js":"plugins/positional_features/positional_features.js", "css":"plugins/positional_features/style.css"}
+	]
+}

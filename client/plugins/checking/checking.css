@@ -1,0 +1,46 @@
+#id .chk_warning {
+	color:rgb(204,0,0);
+}
+
+#id  .chk_ok {
+	color:rgb(0,102,0);
+}
+
+#id  .ui-corner-all {
+	-moz-border-radius:4px 4px 4px 4px;
+}
+
+#id  .ui-widget-content {
+	background:#EEF5F5;
+	border:1px solid #AAAAAA;
+	color:#222222;
+}
+
+#id  .ui-widget {
+	font-family:Verdana,Arial,sans-serif;
+	font-size:1.1em;
+}
+
+#id .ui-progressbar {
+	height:1em;
+	text-align:left;
+}
+
+#id .ui-progressbar .ui-progressbar-value {
+	height:100%;
+	margin:-1px;
+}
+#id .ui-corner-left {
+	-moz-border-radius-bottomleft:4px;
+	-moz-border-radius-topleft:4px;
+}
+#id .ui-corner-right {
+	-moz-border-radius-bottomright:4px;
+	-moz-border-radius-topright:4px;
+}
+#id .ui-widget-header {
+	background:url("images/ui-bg_highlight-soft_75_cccccc_1x100.png") repeat-x scroll 50% 50% #006666;
+	border:1px solid #AAAAAA;
+	color:#222222;
+	font-weight:bold;
+}
