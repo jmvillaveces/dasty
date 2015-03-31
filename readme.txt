@@ -1,1 +1,0 @@
-For detailed installation instructions please go to to http://code.google.com/p/dasty/wiki/Installation
